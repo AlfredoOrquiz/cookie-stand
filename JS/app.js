@@ -61,8 +61,25 @@ function City(name, minCust, maxCust, avgCookies) {
       hourlyData.textContent = this.hourly[i];
       tableRow.appendChild(hourlyData);
     }
+    let totalCookies = document.createElement('td');
+    totalCookies.textContent = this.totalCookies;
+    tableRow.appendChild(totalCookies);
   };
 };
+let tableHead = document.querySelector('thead');
+let tableRow = document.createElement('tr');
+tableHead.appendChild(tableRow);
+let emptyTableData = document.createElement('td');
+tableRow.appendChild(emptyTableData);
+for (let i = 0; i < hours.length; i++) {
+  let dailyRow = document.createElement('td');
+  dailyRow.textContent = hours[i];
+  tableRow.appendChild(dailyRow);
+}
+let dailyData = document.createElement('td');
+dailyData.textContent = 'Daily Total';
+tableRow.appendChild(dailyData);
+
 
 let seattle = new City('Seattle', 23, 65, 6.3);
 let tokyo = new City('Tokyo', 3, 24, 1.2);
@@ -76,11 +93,25 @@ dubai.renderTable();
 paris.renderTable();
 lima.renderTable();
 
-seattle.randomCustomers();
-seattle.cookiesPerHour();
-seattle.hourly;
-console.log(seattle.hourly)
+let footerTable = document.querySelector('tfoot');
+tableRow = document.createElement('tr');
+footerTable.appendChild(tableRow);
+let hourlyTableData = document.createElement('td');
+hourlyTableData.textContent = 'Hourly Total';
+tableRow.appendChild(hourlyTableData);
+for (let i = 0; i < hours.length; i++) {
+  let hourlyTotal = document.createElement('td');
+  hourlyTotal.textContent = seattle.hourly [i] + tokyo.hourly [i] + dubai.hourly [i] + paris.hourly [i] + lima.hourly [i];
+  tableRow.appendChild(hourlyTotal);
+}
+let totalData = document.createElement('td');
+totalData.textContent = seattle.totalCookies + tokyo.totalCookies + dubai.totalCookies + paris.totalCookies + lima.totalCookies;
+tableRow.appendChild(totalData);
 
+// seattle.randomCustomers();
+// seattle.cookiesPerHour();
+// seattle.hourly;
+// console.log(seattle.hourly)
 
 // let seattleH3 = document.createElement('h3');
 // seattleH3.textContent = seattle.name;
