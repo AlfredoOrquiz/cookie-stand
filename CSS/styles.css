@@ -1,0 +1,41 @@
+body {
+  background-color: #c4f4fc;
+}
+
+td {
+  border-style: solid;
+  border-color: black;
+}
+
+.Salmon {
+  width: 200px;
+}
+
+.icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+  size: 9px;
+}
+
+.icon:hover {
+ text-decoration: none;
+ color: #ff4c68;
+}
+
+#footer {
+  background-color: #fff;
+  margin: auto;
+  text-align: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+@media (max-width: 1350px)
+
+/* Color notes 
+#358FC9 
+#ace4fc
+#c4f4fc
+*/
