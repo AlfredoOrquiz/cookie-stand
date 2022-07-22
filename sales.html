@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Cookie stand</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="" href="sales.html">
   </head>
   <body>
+    <a href="index.html">Index</a>
     <div>
       <table>
         <thead>
@@ -18,8 +20,28 @@
           
         </tfoot>
       </table>
+      
+      <section>
+        <form id="form">
+          <fieldset>
+            <legend>Add a new City</legend>
+            <label for="cityName">City name
+              <input type="text" name="cityName" placeholder="City name" id="cityName">
+            </label>
+            <label for="minCust">Minimum number of customers
+              <input type="number" name="minCust" id="minCust">
+            </label>
+            <label for="maxCust">Maximum number of customers
+              <input type="number" name="maxCust" id="maxCust">
+            </label>
+            <label for="avg">Average cookies
+              <input type="number" name="avg" id="avg">
+            </label>
+          </fieldset>
+          <button type="Submit">Submit new city</button>
+        </form>
+      </section>
     </div>
-    <!-- link to the index.html -->
   </body>
   <script src = 'JS/app.js'></script>
 </html>
