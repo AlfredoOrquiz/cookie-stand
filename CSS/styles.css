@@ -1,10 +1,83 @@
 body {
   background-color: #c4f4fc;
+  margin: auto;
+  width: 80%;
+}
+
+body h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: xxx-large;
+  text-align: center;
+}
+
+body h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: xx-large;
+}
+
+body p {
+  font-size: large;
+  width: 45%;
+}
+
+div {
+  border-style: solid;
+  border-color: black;
+}
+
+table {
+  border-style: solid;
+  border-color: black;
 }
 
 td {
   border-style: solid;
   border-color: black;
+}
+
+
+/* Class selectors */
+
+.About-us {
+  text-align: justify;
+  width: 75%;
+}
+
+.Bottom-container {
+  margin-top: 100px;
+}
+
+.Our-goal {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 150px;
+  text-align: justify;
+  width: 75%;
+}
+
+.Our-goal-h2 {
+  margin-left: 630px;
+  position: absolute;
+}
+
+.Our-goal-p {
+  margin-top: 75px;
+}
+
+.Join-us {
+  text-align: justify;
+  margin-top: 100px;
+  width: 75%;
+}
+
+.Join-us-h2 {
+  
+}
+
+.Join-us-p {
+  margin-top: 75px;
 }
 
 .Salmon {
@@ -32,10 +105,37 @@ td {
   margin: 20px 10px;
 }
 
-@media (max-width: 1350px)
+/* Images */
 
-/* Color notes 
-#358FC9 
-#ace4fc
-#c4f4fc
-*/
+.Chinook {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 40rem;
+}
+
+.Family {
+  float: right;
+  margin-left: 730px;
+  position: absolute;
+  width: 20rem;
+}
+
+.Shirt {
+  float: right;
+  margin-left: 900px;
+  position: absolute;
+  width: 20rem;
+}
+
+.Cutter {
+  float: right;
+  margin-left: 550px;
+  position: absolute;
+  width: 20rem;
+}
+
+
+
+@media (max-width: 1350px)

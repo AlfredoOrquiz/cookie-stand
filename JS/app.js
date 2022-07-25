@@ -20,7 +20,7 @@ let seattleMainList = document.getElementById('SeattleSales');
 let hours = ['6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 
 let hourlySales = [];
-for (let i = 0; i < hours.length; i++); {
+for (let i = 0; i < hours.length; i++) {
   hourlySales.push(0);
 }
 console.log(hourlySales);
@@ -44,12 +44,12 @@ function City(name, minCust, maxCust, avgCookies) {
         let hourlyCookie = Math.ceil(this.randomCustomers() * this.avgCookies);
         this.hourly.push(hourlyCookie);
         this.totalCookies += hourlyCookie;
-        // console.log(hourlyCookie);
+        console.log(hourlyCookie);
       }
-      return this.hourly;
-      // this.hourly.push(this.totalCookies);
-    //   console.log(this.totalCookies);
-    // console.log(this.cookiesPerHour);
+      // return this.hourly;
+      this.hourly.push(this.totalCookies);
+      console.log(this.totalCookies);
+      console.log(this.cookiesPerHour);
   };
 
   this.renderTable = function() {
@@ -65,6 +65,7 @@ function City(name, minCust, maxCust, avgCookies) {
       hourlyData.textContent = this.hourly[i];
       tableRow.appendChild(hourlyData);
       hourlySales[i] += parseInt(this.hourly[i]);
+      console.log(this.hourly[i])
     }
     let totalCookies = document.createElement('td');
     totalCookies.textContent = this.totalCookies;
@@ -98,6 +99,8 @@ let dubai = new City('Dubai', 11, 38, 3.7);
 let paris = new City('Paris', 20, 38, 2.3);
 let lima = new City('Lima', 2, 16, 4.6);
 
+let allStores = [seattle, tokyo, dubai, paris. lima];
+
 seattle.renderTable();
 tokyo.renderTable();
 dubai.renderTable();
@@ -130,10 +133,11 @@ function newCitySubmit(event) {
   let avg = parseInt(event.target.avg.value);
   cityName = new City(cityName, minCust, maxCust, avg);
 
-  console.log(event.target.cityName.value);
-  console.log(event.target.minCust.value);
-  console.log(event.target.maxCust.value);
-  console.log(event.target.avg.value);
+
+  console.log(event.target.cityName.value, cityName);
+  console.log(event.target.minCust.value, minCust);
+  console.log(event.target.maxCust.value, maxCust);
+  console.log(event.target.avg.value, avg);
   cityName.renderTable();
 }
 addedCity.addEventListener('submit', newCitySubmit);
